@@ -8,7 +8,7 @@ class CpuUtilization {
         try {
             os.cpuUsage(function (v: any) {
                 if (v > 70) {
-                    //restart sertver
+                    //set the cron here to restart the server
                 }
             });
             client.setex(CPU_UT_TIMER, COUNTER_AMT, JSON.stringify({ type: CPU_UT_TIMER }));
